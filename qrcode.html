@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row valign-wrapper" style="height:60vh">
+            <div class="col s10 offset-s1">
+                <div class="row">
+                    <h3 class="col s8 offset-s2">QR Code Alphabets <small> by Chiu Shihbo</small></h3>
+                    <p class="col s8 offset-s2">This work aims to discuss the unreliability of languages. We human beings created alphabets in order to record our thoughts. People of different cultures write in different languages even though their ideas are the same. One way we communicate is by translation. Without translation, many thoughts and ideas can not be understood. I doubt if people can really understand what people think in other languages? I transferred 26 English alphabets into QR Codes, and then removed the common part of the codes. The rest of them were regarded as a kind of alphabets. Each of them indeed stands for one alphabet, but we can not understand at all. Only if we combine them with the common part and then scan them by a smartphone can we get the meanings.<a href="https://chiushihbo.co.uk/QR-Code-Alphabets"> - Original Work</a></p>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <input id="qr_input" type="text">
+                        <label for="qr_input">Type Your Words Here</label>
+                        <button id="qr_submit" class="waves-effect waves-light btn">Generate!</button>                        
+                        <button id="qr_common" class="waves-effect waves-light green btn">Add Common</button>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="qr_output" class="col s12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- MaterializeJS -->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    
+    <!-- Custom Code -->
+    <script type="text/javascript" src="qrcode.js"></script>
+</body>
+
+</html>
