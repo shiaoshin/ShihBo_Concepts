@@ -45,5 +45,10 @@
 /* QR Code */
 #qr_output > img {
     width: 100px;
-    margin: 0 10px;
+    margin: 10px 10px;
+    
+    &.common {
+        background: url("../img/alphabets/common.png") no-repeat center center;
+        background-size: cover;
+    }
 }
