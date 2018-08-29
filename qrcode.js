@@ -13,7 +13,7 @@ $(function(){
         $.each(chars,function(ind, alphabet){
             var validate = alphabet.match(/[A-Za-z]/);
             if(validate != null){
-                $("#qr_output").append("<img src='img/alphabets/"+alphabet+".png'>");
+                $("#qr_output").append("<img src='img/alphabets/"+alphabet.toLowerCase()+".png'>");
             }else{
                 var msg = (alphabet == " ")?"space":alphabet;
                 M.toast({html: msg+" is not supported!", displayLength: toastDuration});
