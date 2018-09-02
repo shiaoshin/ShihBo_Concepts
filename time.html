@@ -11,10 +11,22 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <div class="container">
+<body class="time">
+    <div class="container container-narrow">
+        <header class="row">
+            <h1 class="col s12 center">SCHEDULE</h1>
+        </header>
         <div class="row">
-            
+            <div class="col s6 right-align">
+                GMT+0
+            </div>
+            <div class="col s6">
+                GMT+8
+            </div>
+        </div>
+        <div class="row">
+            <div id="time_left" class="col s6 right-align"></div>
+            <div id="time_right" class="col s6"></div>
         </div>
     </div>
     
@@ -23,6 +35,9 @@
     
     <!-- MaterializeJS -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    
+    <!-- Common Code -->
+    <script type="text/javascript" src="js/common.js"></script>
     
     <!-- Custom Code -->
     <script type="text/javascript" src="time.js"></script>

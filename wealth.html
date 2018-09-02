@@ -11,10 +11,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <div class="container">
+<body class="wealth">
+    <div class="container container-narrow">
+        <header class="row">
+            <h1 class="col s12 center">BANK STATEMENT</h1>
+        </header>
         <div class="row">
-            
+            <div class="col s6">SAVINGS</div>
+            <div class="col s6 right-align">AMOUNT</div>
+            <hr class="col s12">
+            <div class="col s9">000-13249200-321</div>
+            <div class="col s3 right-align">&#163;0</div>
+        </div>
+        <div class="row"></div>
+        <div class="row">
+            <div class="col s6">CARD NAME</div>
+            <div class="col s6 right-align">CREDIT</div>
+            <hr class="col s12">
+            <div id="card" class="col s9"></div>
+            <div id="credit" class="col s3 right-align"></div>
         </div>
     </div>
     
@@ -23,6 +38,9 @@
     
     <!-- MaterializeJS -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    
+    <!-- Common Code -->
+    <script type="text/javascript" src="js/common.js"></script>
     
     <!-- Custom Code -->
     <script type="text/javascript" src="wealth.js"></script>

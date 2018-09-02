@@ -41,6 +41,129 @@
 @import "components/timepicker";
 
 /* General */
+* {
+    font-weight: 500;
+}
+.container.container-narrow {
+    max-width: 320px;
+    box-shadow: 2px 0 10px -2px rgba(0,0,0,0.5);
+}
+body {
+    header {
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 45px;
+            background-color: #000;
+        }        
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 110px 0;
+            letter-spacing: 2px;
+        }
+    }
+}
+.row:last-child{
+    margin-bottom: 0;
+}
+
+/* Time */
+
+$primaryColor_time: #e8c801;
+
+.time {
+    header {
+        &:before {
+            background-color: $primaryColor_time;
+        }
+    }
+    #time_left {
+        @for $i from 18 through 70 {
+            > div:nth-child(81n + #{$i}){
+                color: $primaryColor_time;
+            };
+        }
+    }
+    #time_right {
+        @for $i from 3 through 33 {
+            > div:nth-child(81n + #{$i}){
+                color: $primaryColor_time;
+            };
+        }
+    }
+}
+
+/* Wealth */
+.wealth {
+    font-family: "Courier New", "Courier";
+    font-size: 10px;
+    
+    hr {
+        border: none;
+        border-bottom: 1px dashed black;
+    }
+    
+    #card {
+        letter-spacing: -1.5px;
+        
+    }
+    #credit > div:before {
+        content: "£";
+    }
+}
+
+/* Love */
+
+/* Friendship */
+
+$primaryColor_friendship: #1e64aa;
+$secondaryColor_friendship: #7cb62c;
+@mixin pseudoImg($width, $height, $round, $top, $right){
+    content: "";
+    display: block;
+    position: absolute;
+    width: $width;
+    height: $height;
+    top: $top;
+    right: $right;
+    border-radius: $round;
+    background-color: white;
+}
+
+.friendship {
+    header {
+        &:before {
+            background-color: $primaryColor_friendship;
+        }
+        h1 {
+            color: $primaryColor_friendship;
+        }
+    }
+    #roster {
+        > div {
+            color: $primaryColor_friendship;
+            position: relative;
+            
+            &:after {
+                @include pseudoImg(10px, 10px, 50%, 7px, 0);
+                background-color: $secondaryColor_friendship;
+            }
+            
+            &.Friend:after {
+                background-color: #80a0c6;
+            }
+            
+            &.Friend:before {
+                @include pseudoImg(7px, 7px, 50%, 7px, 0);
+                z-index: 1;             
+            }
+        }
+    }
+}
+
+/* Life */
 
 /* QR Code */
 #qr_output > img {
