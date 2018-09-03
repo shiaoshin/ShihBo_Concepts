@@ -114,10 +114,7 @@ $primaryColor_time: #e8c801;
     }
 }
 
-/* Love */
-
 /* Friendship */
-
 $primaryColor_friendship: #1e64aa;
 $secondaryColor_friendship: #7cb62c;
 @mixin pseudoImg($width, $height, $round, $top, $right){
@@ -158,6 +155,32 @@ $secondaryColor_friendship: #7cb62c;
             &.Friend:before {
                 @include pseudoImg(7px, 7px, 50%, 7px, 0);
                 z-index: 1;             
+            }
+        }
+    }
+}
+
+/* Love */
+$primaryColor_love: #d0121e;
+
+.love {
+    .row-1-16 {
+        > div {
+            width: 20px;
+            display: block;
+            height: 20px;
+            padding: 0;
+            position: relative;
+
+            @for $j from 1 through 6 {
+                &.size-#{$j}:after {
+                    @include pseudoImg($j * 3px, $j * 3px, 50%, 10px - $j * 1.5px, 10px - $j * 1.5px);
+                    background-color: black;
+                }
+            }
+            
+            &[class*="size"].reddot:after {
+                background-color: $primaryColor_love;
             }
         }
     }
